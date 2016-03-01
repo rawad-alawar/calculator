@@ -2,6 +2,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 20px;
+	max-width: 280px;
+	min-width: 260px;
 }
 
 
@@ -14,16 +16,24 @@ button {
 #answer {
 	background-color: rgba(250,20,20,.3);
 	height: 20vh;
-	margin: 20px 20px 0px 20px;
+	margin: 20px 20px 0px 10px;
 	color: white;
 	text-align: center;
 	font-size: 2em;
 	line-height: 20vh;
 	vertical-align: middle;
 	border-radius: 5px;
+	min-width: 260px;
+	max-width: 280px;
 
 }
 
-#title {
+#EDA {
 	background-color: rgba(250,20,20,.2);
+}
+
+#title {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding-left: 70px;
 }
