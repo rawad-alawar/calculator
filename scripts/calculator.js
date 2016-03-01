@@ -24,13 +24,31 @@ $(document).ready(function(){
 			document.getElementById("answer").innerHTML = answer;
 			equation = "";
 		}
+		if (value ==="e^x"){
+			x = eval(equation);
+			ex = 0;
+			for (i=0; i < 10; i++){
+				N = factorial(i);
+				console.log(answer);
+				console.log(typeof answer);
+				ex += (Math.pow(x,i))/N;
+			}
+			document.getElementById("answer").innerHTML = ex;
+			equation = "";
+		}
 
 
 
 	});
 
 
-
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  
+  return n * factorial(n - 1);
+}
 
 
 
