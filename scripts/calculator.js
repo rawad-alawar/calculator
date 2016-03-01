@@ -27,12 +27,14 @@ $(document).ready(function(){
 		if (value ==="e^x"){
 			x = eval(equation);
 			ex = 0;
-			for (i=0; i < 10; i++){
+			for (i=0; i < 100; i++){
 				N = factorial(i);
 				console.log(answer);
 				console.log(typeof answer);
 				ex += (Math.pow(x,i))/N;
 			}
+
+			ex = Math.round(ex*1000)/1000;
 			document.getElementById("answer").innerHTML = ex;
 			equation = "";
 		}
