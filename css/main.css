@@ -10,3 +10,20 @@ button {
 	padding: 0px;
 	width: 60px;
 }
+
+#answer {
+	background-color: rgba(250,20,20,.3);
+	height: 20vh;
+	margin: 20px 20px 0px 20px;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	line-height: 20vh;
+	vertical-align: middle;
+	border-radius: 5px;
+
+}
+
+#title {
+	background-color: rgba(250,20,20,.2);
+}
