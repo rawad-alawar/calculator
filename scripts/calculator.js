@@ -1,30 +1,37 @@
 //calculator
 
 var equation = "";
-var arr = ["0","1","2","3","4","5","6","7","8","9",".","+","-","*","%"];
+var arr = ["0","1","2","3","4","5","6","7","8","9",".","+","-","*","%","/"];
 var value = "";
 var answer = "";
+var operators = ["+","-","*","/","%"];
 
 $(document).ready(function(){
 	$("button").click(function(){
 		
 		value = this.innerHTML;
 		
+		if ($.inArray(value,operators) > -1 && $.inArray(equation[equation.length - 1],operators) > -1){
+			var doNothing = "nothing"; // prevents operators from repeating
+		}
+		else if ($.inArray(value,operators) > -1 && equation === ""){
+			var doNothing = "nothing"; // prevents first entry to be an operator
+		}
 
-		if ($.inArray(value,arr) !== -1){
+		else if ($.inArray(value,arr) !== -1){
 			equation += value;
 			document.getElementById("answer").innerHTML = equation;
 		}
-		if (value === "C") {
+		else if (value === "C") {
 			equation = "";
 			document.getElementById("answer").innerHTML = equation;
 		}
-		if (value === "="){
+		else if (value === "="){
 			answer = eval(equation);
 			document.getElementById("answer").innerHTML = answer;
 			equation = "";
 		}
-		if (value ==="e^x"){
+		else if (value ==="e^x"){
 			x = eval(equation);
 			ex = 0;
 			for (i=0; i < 100; i++){
